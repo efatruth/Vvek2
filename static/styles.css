@@ -23,22 +23,25 @@ body{
 .row{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    grid-gap: 2em;
 }
 
 img{
-    width: 100;
+    max-width: 100%;
+    height: auto;
 }
  .pd2{
      padding-left: 2em;
  }
 
- .errormsg{
+ .error{
      color: #700;
      text-align: center;
  }
 
- .top2em {
-     padding: 3em 0 0 2em;
+ .top3em {
+     padding: 3em;
  }
 
  nav{

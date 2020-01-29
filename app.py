@@ -38,11 +38,16 @@ frettir = [
      "Íslenska karlalandsliðið í körfubolta er dottið úr leik a Eurobasket þrátt fyrir ágætis spretti inn a milli.  Ísland spilaði lokaleik sinn á mótinu fyrir troðfullri höll gegn heimamönnum Finnum..", 
      "dsg@frettir.is"]
 ]
-"""
+
 @app.route('/b-hluti')
-def home():
-    return render_template('frettir.html')
-"""
+def bhluti():
+    return render_template('frettir.html', frettir=frettir)
+
+
+@app.route('/frett/<int:id>')
+def news(id):
+    return render_template('frett.html', frett=frettir[id], nr=id)
+
 #villuskilaborð
 @app.errorhandler(404)
 def pagenotfound(error):
