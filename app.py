@@ -5,9 +5,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('default.html')
+    return render_template('index.html')
 
-@app.route('/kt-sida/<kt>')
+
+#verkefni A
+@app.route('/a-hluti')
+def home():
+    return render_template('kennitala.html')
+
+@app.route('/kt-sida/<kt>') 
 def ktsida(kt):
     summa=0
     for item in kt:
@@ -15,10 +21,32 @@ def ktsida(kt):
 
     return render_template('kt-sum.html', kt=kt, summa=summa)
 
-
+#verkhluti B
+#database er utfærður sem tvívíður listi(dictionary)
+#id, fyrirsögn, frétt, e-mail
+frettir = [
+    ["0","Guðmundur veldur usla á Flórída",
+     "Það er bara helv... vesen á Irmu í Flórída.  Milljónir manna hafa þurft að yfirgefa heimili sin vegna yfirvofandi eyðileggingar Irmu...", 
+     "dsg@frettir.is"],
+    ["1","Veiðin er dræm þetta haustið",
+     "Veiðin hefur heldur verið döpur þetta haustið þrátt fyrir ágætis rigninar upp á síðkastið...", 
+     "est@frettir.is"],
+    ["2","Ólafía stendur sig vel",
+     "Ólafía er komin í 65 sæti peningalistans og hefur því tryggt sér keppnisrétt á LPG mótaröðinni á komandi keppnistimabili...", 
+     "htg@frettir.is"],
+    ["3","Ísland dottið úr leik",
+     "Íslenska karlalandsliðið í körfubolta er dottið úr leik a Eurobasket þrátt fyrir ágætis spretti inn a milli.  Ísland spilaði lokaleik sinn á mótinu fyrir troðfullri höll gegn heimamönnum Finnum..", 
+     "dsg@frettir.is"]
+]
+"""
+@app.route('/b-hluti')
+def home():
+    return render_template('frettir.html')
+"""
+#villuskilaborð
 @app.errorhandler(404)
 def pagenotfound(error):
-    return render_template('pagenotfound.html.html'), 404
+    return render_template('pagenotfound.html'), 404
 
 if __name__== '__main__':
     app.run(debug=True)
