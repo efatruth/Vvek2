@@ -1,6 +1,49 @@
-h1,h2{color: blue;
 
+* {
+    box-sizing: border-box;
 }
-.error{
-    color: red;
+
+body{
+    max-width: 50em;
+    margin: 0 auto;
+    font-family: sans-serif;
 }
+
+.haus, .footer{
+    border:1px solid grey;
+    border-radius: 5px ;
+    color: 777;
+    text-align: center;
+}
+
+.fotur{
+    margin-top: 2em;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 2em;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+ .pd2{
+     padding-left: 2em;
+ }
+
+ .error{
+     color: #700;
+     text-align: center;
+ }
+
+ .top3em {
+     padding: 3em;
+ }
+
+ nav{
+     padding-bottom: 1em;
+ }
