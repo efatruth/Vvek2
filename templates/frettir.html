@@ -6,14 +6,14 @@
     <div class="row">
         <section>
             <h1>{{ frettir[0][1] }}</h1>
-            <img src="/static/mynd0.jpg">
+            <img src="/static/myndd0.jpg">
         </section>
         <section>
             <h3>Hasarfréttir dagsins</h3>
             <ul>
             {% for item in frettir %}
-                <li><a href="/frett/{{ item[0] }}"> {{ item[1] }}</a> </li>
-                {% endbfor %}
+                <li><a href="/frett/{{ item[0]}}"> {{ item[1] }}</a> </li>
+                {% endfor %}
             </ul>
         </section>
     </div>

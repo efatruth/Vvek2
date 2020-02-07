@@ -10,7 +10,7 @@ def home():
 
 #verkefni A
 @app.route('/a-hluti')
-def home():
+def ahluti():
     return render_template('kennitala.html')
 
 @app.route('/kt-sida/<kt>') 
@@ -26,7 +26,7 @@ def ktsida(kt):
 #id, fyrirsögn, frétt, e-mail
 frettir = [
     ["0","Guðmundur veldur usla á Flórída",
-     "Það er bara helv... vesen á Irmu í Flórída.  Milljónir manna hafa þurft að yfirgefa heimili sin vegna yfirvofandi eyðileggingar Irmu...", 
+     "Það er bara helv... vesen á Guðmundur í Flórída.  Milljónir manna hafa þurft að yfirgefa heimili sin vegna yfirvofandi eyðileggingar Guðmundur...", 
      "dsg@frettir.is"],
     ["1","Veiðin er dræm þetta haustið",
      "Veiðin hefur heldur verið döpur þetta haustið þrátt fyrir ágætis rigninar upp á síðkastið...", 
